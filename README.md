@@ -2,6 +2,8 @@
 
 These are the files required to reproduce my Guix environment on any GNU/Linux machine (or WSL).
 
+## How to use the repo
+
 Download it with git or wget:
 
 > git clone https://github.com/inigogonzalezdearrieta/guix-config.git
@@ -25,3 +27,7 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
 > alias exportmanifest='guix package --export-manifest > ~/guix-config/manifest.scm'
 > 
 > alias exportchannels='guix describe -f channels > ~/guix-config/channels.scm'
+
+## TO-DO
+
+- Add manifest files for packages imported from PyPI: spectrochempy, ferpy, brukeropusreader.
