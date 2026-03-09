@@ -30,4 +30,4 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
 
 ## TO-DO
 
-- Add manifest files for packages imported from PyPI: spectrochempy, ferpy, brukeropusreader.
+- [ ] Add manifest files for packages imported from PyPI: spectrochempy, ferpy, brukeropus, brukeropusreader.
