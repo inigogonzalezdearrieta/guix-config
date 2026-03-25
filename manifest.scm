@@ -5,7 +5,8 @@
 ;; See the "Replicating Guix" section in the manual.
 
 (specifications->manifest
-  (list "python-numba"
+  (list "python-ferpy"
+        "python-numba"
         "python-pyqt"
         "mpich"
         "python-tqdm"
