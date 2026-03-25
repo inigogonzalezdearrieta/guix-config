@@ -28,6 +28,12 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
 > 
 > alias exportchannels='guix describe -f channels > ~/guix-config/channels.scm'
 
+Manually defined packages (at the moment, python-ferpy.scm) can be installed as:
+
+> guix package -f python-ferpy.scm
+
 ## TO-DO
 
-- [ ] Add manifest files for packages imported from PyPI: spectrochempy, ferpy, brukeropus, brukeropusreader.
+- [ ] Add manifest files for packages imported from PyPI:
+    - [X] ferpy.
+    - [ ] spectrochempy, brukeropus, brukeropusreader.
