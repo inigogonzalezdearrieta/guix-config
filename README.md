@@ -4,11 +4,11 @@ These are the files required to reproduce my Guix environment on any GNU/Linux m
 
 ## How to use the repo
 
-Download it with git or wget:
+Clone it with git, ideally on your home directory:
 
 > git clone https://github.com/inigogonzalezdearrieta/guix-config.git
-> 
-> wget https://github.com/inigogonzalezdearrieta/guix-config/archive/refs/heads/main.tar.gz && tar -xzf main.tar.gz
+
+### Reproducing the list of packages
 
 The `channels.scm` file is a snapshot of a particular Guix commit that you can either pull permanently or temporarily go back in time to run a particular `<command>`:
 
@@ -16,11 +16,19 @@ The `channels.scm` file is a snapshot of a particular Guix commit that you can e
 > 
 > guix time-machine -C ~/guix-config/channels.scm -- shell <command>
 
-Afterwards, you can install the packages in `manifest.scm` permanently or within a temporary shell as:
+After pulling a certain version of Guix, you can install the packages in `manifest.scm` permanently or within a temporary shell as:
 
 > guix package -m ~/guix-config/manifest.scm
 > 
 > guix shell -m ~/guix-config/manifest.scm
+
+### Manual packages
+
+Manually defined packages (at the moment, only `python-ferpy.scm`) can be installed as:
+
+> guix package -f python-ferpy.scm
+
+### Generating updated versions
 
 Add the following lines to your `.bash_aliases` dotfile to more easily generate updated versions:
 
@@ -28,12 +36,11 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
 > 
 > alias exportchannels='guix describe -f channels > ~/guix-config/channels.scm'
 
-Manually defined packages (at the moment, python-ferpy.scm) can be installed as:
-
-> guix package -f python-ferpy.scm
 
 ## TO-DO
 
 - [ ] Add manifest files for packages imported from PyPI:
     - [X] ferpy.
     - [ ] spectrochempy, brukeropus, brukeropusreader.
+- [ ] Contribute those packages to guix.
+- [ ] Generate custom manifest files for different programming tasks.
