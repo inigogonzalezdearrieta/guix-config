@@ -40,7 +40,7 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
 ## TO-DO
 
 - [ ] Add manifest files for packages imported from PyPI:
-    - [X] ferpy.
-    - [ ] spectrochempy, brukeropus, brukeropusreader.
+    - [X] ferpy, brukeropusreader.
+    - [ ] spectrochempy, ft4ftir.
 - [ ] Contribute those packages to guix.
 - [ ] Generate custom manifest files for different programming tasks.
