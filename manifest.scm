@@ -4,28 +4,53 @@
 ;; capture the channels being used, as returned by "guix describe".
 ;; See the "Replicating Guix" section in the manual.
 
+(define python-packages
+  (list
+   "python"
+   "python-wrapper"
+   "python-numpy"
+   "python-pandas"
+   "python-scipy"
+   "python-matplotlib"
+   "python-black"
+   "python-epc"
+   "python-jedi"
+   "python-numba"
+   "python-nbconvert"
+   "python-tqdm"
+   "python-sympy"
+   )
+  )
+
+(define gnu-packages
+  (list
+   "gcc-toolchain"
+   "gfortran-toolchain"
+   "make"
+   )
+  )
+
+(define libraries
+  (list
+   "mpich"
+   "lapack"
+   "openblas"
+   "gsl"
+   )
+  )
+
+(define other-packages
+  (list
+   "pandoc"
+   )
+  )
+
 (specifications->manifest
-  (list "python-numba"
-        "python-pyqt"
-        "mpich"
-        "python-tqdm"
-        "python-nbconvert"
-        "python-scipy"
-        "gcc-toolchain"
-        "python-pip"
-        "python-sympy"
-        "pandoc"
-        "lapack"
-        "python-black"
-        "python-pandas"
-        "python-matplotlib"
-        "python-numpy"
-        "make"
-        "gfortran-toolchain"
-        "gsl"
-        "openblas"
-        "python-wrapper"
-        "fftw"
-        "python"
-        "python-epc"
-        "python-jedi"))
+ (append
+  ;; manual-packages ; TO-DO
+  python-packages
+  gnu-packages
+  libraries
+  other-packages
+  )
+ )
