@@ -26,6 +26,7 @@
 
 (define gnu-packages
   (list
+   "emacs"
    "gcc-toolchain"
    "gfortran-toolchain"
    "make"
@@ -44,6 +45,9 @@
 (define other-packages
   (list
    "pandoc"
+   "cmake"
+   "libtool"
+   "libvterm"
    )
   )
 
