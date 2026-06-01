@@ -19,6 +19,8 @@
    "python-nbconvert"
    "python-tqdm"
    "python-sympy"
+   "jupyter"
+   "guix-jupyter"
    )
   )
 
