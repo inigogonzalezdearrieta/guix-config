@@ -44,6 +44,7 @@
 
 (define other-packages
   (list
+   "texlive"
    "pandoc"
    "cmake"
    "libtool"
