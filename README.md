@@ -51,3 +51,5 @@ Add the following lines to your `.bash_aliases` dotfile to more easily generate 
     - [ ] spectrochempy, ft4ftir.
 - [ ] Contribute those packages to the `guix` or `guix-science` repos.
 - [ ] Generate custom manifest files for different programming tasks.
+- [ ] Generate and test a usable home configuration file.
+- [ ] Configure all Emacs packages (ELPA or MELPA) with Guix.
