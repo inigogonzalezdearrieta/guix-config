@@ -1,0 +1,80 @@
+# nano configuration file by Inigo.
+# Created on June 10, 2025.
+
+# Basic configurations
+set linenumbers       # Show line numbers
+set tabsize 4         # Set tab width
+set autoindent        # Preserve indent on new lines
+set mouse			 # Enable mouse support
+unset jumpyscrolling  # Enables smoother scrolling
+set indicator        # Show scrollbar-like indicator on the side
+set zap             # Allows you to highlight text (CTRL+SHIFT+ARROW) and delete it with backspace.
+set speller "aspell -x -c"         # Sets what spelling utility to use.
+# The spell-checker can be invoked with ^T^T.
+
+# Expert mode (no help or title bars)
+set nohelp
+set minibar
+
+# In anticipation of nano 8.0, in order to avoid these keys changing their meaning to "find" when updating.
+bind ^F forward main
+bind ^B back main
+# Emacs-like M-F and M-B
+bind M-F nextword main
+bind M-B prevword main
+
+# M-F and M-B are used in nano to cycle through search results, so new bindings are required
+# ^S and ^R are good Emacs-like choices for cycling
+bind ^S findnext main
+bind ^R findprevious main
+
+# I never justify text, so I rebind ^J to comment lines and unbind M-J.
+bind ^J comment main
+unbind M-J main
+
+# Emacs compatibility. I don't find the default Nano bindings for these keys useful.
+bind M-W copy main
+bind ^Space mark main
+bind M-V pageup main
+bind ^C execute main
+bind ^Y paste main
+bind ^U undo main
+
+# By analogy with ^K (cut)
+bind M-K copy main
+
+# Fortran support (from scopatz/nanorc)
+syntax "Fortran" "\.([Ff]|[Ff]90|[Ff]95|[Ff][Oo][Rr])$"
+comment "!"
+color red "\<[0-9]+\>" 
+icolor green "\<(action|advance|all|allocatable|allocated|any|apostrophe)\>"
+icolor green "\<(append|asis|assign|assignment|associated|character|common)\>"
+icolor green "\<(complex|data|default|delim|dimension|double precision)\>"
+icolor green "\<(elemental|epsilon|external|file|fmt|form|format|huge)\>"
+icolor green "\<(implicit|include|index|inquire|integer|intent|interface)\>"
+icolor green "\<(intrinsic|iostat|kind|logical|module|none|null|only)\>"
+icolor green "\<(operator|optional|pack|parameter|pointer|position|private)\>"
+icolor green "\<(program|public|real|recl|recursive|selected_int_kind)\>"
+icolor green "\<(selected_real_kind|subroutine|status)\>"
+icolor cyan "\<(abs|achar|adjustl|adjustr|allocate|bit_size|call|char)\>" 
+icolor cyan "\<(close|contains|count|cpu_time|cshift|date_and_time)\>" 
+icolor cyan "\<(deallocate|digits|dot_product|eor|eoshift|function|iachar)\>" 
+icolor cyan "\<(iand|ibclr|ibits|ibset|ichar|ieor|iolength|ior|ishft|ishftc)\>" 
+icolor cyan "\<(lbound|len|len_trim|matmul|maxexponent|maxloc|maxval|merge)\>" 
+icolor cyan "\<(minexponent|minloc|minval|mvbits|namelist|nearest|nullify)\>" 
+icolor cyan "\<(open|pad|present|print|product|pure|quote|radix)\>" 
+icolor cyan "\<(random_number|random_seed|range|read|readwrite|replace)\>" 
+icolor cyan "\<(reshape|rewind|save|scan|sequence|shape|sign|size|spacing)\>" 
+icolor cyan "\<(spread|sum|system_clock|target|transfer|transpose|trim)\>" 
+icolor cyan "\<(ubound|unpack|verify|write|tiny|type|use|yes)\>"
+icolor yellow "\<(.and.|case|do|else|else?if|else?where|end|end?do|end?if)\>"
+icolor yellow "\<(end?select|.eqv.|forall|if|lge|lgt|lle|llt|.neqv.|.not.)\>"
+icolor yellow "\<(.or.|repeat|select case|then|where|while)\>"
+icolor magenta "\<(continue|cycle|exit|go?to|result|return)\>"
+color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+color magenta "[(){}]" "\[" "\]"
+color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+icolor cyan "<[^=     ]*>" ""(\\.|[^"])*""
+icolor cyan "<[^=     ]*>" "'(\\.|[^"])*'"
+icolor brightred "!.*$" "(^[Cc]| [Cc]) .*$"
+color ,green "[[:space:]]+$"

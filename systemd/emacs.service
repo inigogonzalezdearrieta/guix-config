@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Emacs text editor
+Documentation=info:emacs
+
+[Service]
+Type=forking
+ExecStart=/home/inigo/.guix-profile/bin/emacs --daemon
+ExecStop=/home/inigo/.guix-profile/bin/emacsclient --eval "(kill-emacs)"
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
