@@ -1,0 +1,12 @@
+# Standard aliases:
+alias la='ls -A'
+alias lrt='ls -lrt'
+alias upgradesys='sudo apt update && sudo apt upgrade'
+
+# Emacs aliases:
+alias vi='emacs -nw'
+
+# Guix aliases:
+alias upgradeguix='guix pull && guix upgrade && guix gc'
+alias exportmanifest='guix package --export-manifest > ~/guix-config/manifest.scm'
+alias exportchannels='guix describe -f channels > ~/guix-config/channels.scm'
