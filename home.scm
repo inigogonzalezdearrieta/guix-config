@@ -41,6 +41,4 @@
      `((".emacs.d/init.el"
          ,(local-file "emacs.d/init.el"))
        (".emacs.d/early-init.el"
-        ,(local-file "emacs.d/early-init.el"))
-       (".emacs.d/custom.el"
-        ,(local-file "emacs.d/custom.el")))))))
+        ,(local-file "emacs.d/early-init.el")))))))
