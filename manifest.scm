@@ -26,7 +26,6 @@
 
 (define gnu-packages
   (list
-   "emacs"
    "gcc-toolchain"
    "gfortran-toolchain"
    "make"
