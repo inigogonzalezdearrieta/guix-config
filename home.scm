@@ -20,6 +20,10 @@
     (service home-bash-service-type
              (home-bash-configuration
 	      (guix-defaults? #t)
+	      (bashrc (list (local-file "dotfiles/bashrc"
+                                                     "bashrc")))
+	      (bash-logout (list (local-file "dotfiles/bash_logout"
+                                               "bash_logout")))
 	      (environment-variables '(("EDITOR" . "nano")))))
 
     ;; Manually configured aliases
