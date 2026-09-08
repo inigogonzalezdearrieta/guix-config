@@ -29,6 +29,7 @@
    "gcc-toolchain"
    "gfortran-toolchain"
    "make"
+   "info-reader"
    )
   )
 
@@ -43,6 +44,7 @@
 
 (define other-packages
   (list
+   "cups"
    "texlive-scheme-full"
    "ghostscript"
    "pandoc"
