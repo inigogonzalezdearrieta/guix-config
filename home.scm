@@ -45,4 +45,11 @@
      `((".emacs.d/init.el"
          ,(local-file "emacs.d/init.el"))
        (".emacs.d/early-init.el"
-        ,(local-file "emacs.d/early-init.el")))))))
+        ,(local-file "emacs.d/early-init.el"))))
+
+    ;; Systemd services configuration
+    (simple-service
+     'systemd-services-config
+     home-files-service-type
+     `((".config/systemd/user/emacs.service"
+         ,(local-file "systemd/emacs.service")))))))
