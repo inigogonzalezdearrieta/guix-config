@@ -35,22 +35,36 @@
 
 (define libraries
   (list
-   "mpich"
    "lapack"
    "openblas"
    "gsl"
+   "libtool"
+   "libvterm"
    )
   )
 
 (define other-packages
   (list
    "cups"
+   "mpich"
    "texlive-scheme-full"
    "ghostscript"
    "pandoc"
    "cmake"
-   "libtool"
-   "libvterm"
+   "git"
+   "fastfetch"
+   )
+  )
+
+(define desktop-apps
+  (list
+   "libreoffice"
+   "icecat"
+   "remmina"
+   "gimp"
+   "catfish"
+   "inkscape"
+   "firefox" ;; nonguix
    )
   )
 
@@ -61,5 +75,6 @@
   gnu-packages
   libraries
   other-packages
+  desktop-apps
   )
  )
