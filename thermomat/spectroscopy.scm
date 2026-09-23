@@ -1,6 +1,7 @@
 ;; Custom module for spectroscopy packages.
 ;; License: GPL-3.0.
 ;; Copyright © 2026 Inigo Gonzalez de Arrieta <inigo.gonzalezdearrieta@ehu.eus>
+;; OPUS is a trademark of Bruker. Use of the mark does not imply endorsement or affiliation.
 
 (define-module (spectroscopy)
   #:use-module (guix packages)
@@ -12,7 +13,12 @@
   #:use-module (gnu packages python)
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages python-science)
-  #:use-module (gnu packages python-build))
+  #:use-module (gnu packages python-build)
+  #:use-module (gnu packages jupyter)
+  #:use-module (gnu packages time)
+  #:use-module (gnu packages check)
+  #:use-module (gnu packages python-check)
+  #:use-module (utils))
 
 ;; Modules are imported from PyPI and tweaked.
 ;; Check their integrity from the parent directory with:
@@ -86,3 +92,38 @@
     (description
      "This package provides a package for processing FTIR interferograms.")
     (license license:gpl3)))
+
+(define-public python-hairl-fer-py
+  (package
+    (name "python-hairl-fer-py")
+    (version "0.3.0")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/jongablop/hairl-fer-py")
+             (commit (string-append "v" version))))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32 "1whwbv74d1h2irvazfr23yvv96vfnw11i8xd7dj7azpfwlq5w98s"))))
+    (arguments
+     '(#:tests? #f))
+    (build-system pyproject-build-system)
+    (propagated-inputs (list python-brukeropusreader
+                             python-ferpy
+                             python-ft4ftirs
+                             python-matplotlib
+                             python-numpy
+                             python-pandas
+                             python-pytz
+                             python-pyyaml
+                             python-ruamel-yaml
+                             python-scipy))
+    (native-inputs (list python-ipykernel python-pytest ruff
+                         python-setuptools python-setuptools-scm))
+    (home-page "https://github.com/jongablop/hairl-fer-py")
+    (synopsis
+     "Emissivity processing for the HAIRL emissometer, on the FER data model")
+    (description
+     "Emissivity processing for the HAIRL emissometer, on the FER data model.")
+    (license license:gpl3+)))
