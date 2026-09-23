@@ -83,8 +83,12 @@
         (base32 "1rv43khfwdp36m0w57f85n5r2i87yqx2ggacx0ajsqcjkjpqi41m"))))
     (arguments
      '(#:tests? #f))
+    (snippet
+     #~(substitute* "pyproject.toml"
+		    (("\\[tool\\.setuptools_scm\\]")
+		     "[tool.setuptools_scm]\nfallback_version = \"1.1.0\"")))
     (build-system pyproject-build-system)
-    (native-inputs (list python-setuptools))
+    (native-inputs (list python-setuptools python-setuptools-scm))
     (propagated-inputs (list python-brukeropusreader python-numpy
                              python-pandas python-scipy))
     (home-page "https://github.com/jongablop/ft4ftirs")
