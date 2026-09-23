@@ -30,13 +30,10 @@
     (version "0.2.0")
     (source
      (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/jongablop/ferpy")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
+       (method url-fetch)
+       (uri (pypi-uri "ferpy" version))
        (sha256
-        (base32 "0dcqxmhi5mlbhwaxisflhfpdpva11kq3dfcx2vpx2gxkbj6rpak9"))))
+        (base32 "0vn5pq988cq007zvap8nm74d346895nyj2lja5mfsyhid54rzpn1"))))
     (arguments
      '(#:tests? #f))
     (build-system pyproject-build-system)
@@ -74,19 +71,12 @@
     (version "1.1.0")
     (source
      (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/jongablop/ft4ftirs")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
+       (method url-fetch)
+       (uri (pypi-uri "ft4ftirs" version))
        (sha256
-        (base32 "1rv43khfwdp36m0w57f85n5r2i87yqx2ggacx0ajsqcjkjpqi41m"))))
+        (base32 "0ddsxqxh4hx3r151kvwdfjvdwcqn0my9ij4fi4vnwvg7s7g02x3m"))))
     (arguments
      '(#:tests? #f))
-    (snippet
-     #~(substitute* "pyproject.toml"
-		    (("\\[tool\\.setuptools_scm\\]")
-		     "[tool.setuptools_scm]\nfallback_version = \"1.1.0\"")))
     (build-system pyproject-build-system)
     (native-inputs (list python-setuptools python-setuptools-scm))
     (propagated-inputs (list python-brukeropusreader python-numpy
@@ -103,13 +93,10 @@
     (version "0.3.0")
     (source
      (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/jongablop/hairl-fer-py")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
+       (method url-fetch)
+       (uri (pypi-uri "hairl_fer_py" version))
        (sha256
-        (base32 "1whwbv74d1h2irvazfr23yvv96vfnw11i8xd7dj7azpfwlq5w98s"))))
+        (base32 "0vhxm2dqmhr00502sbd5500xkl8rfqnsv9j1kdbmyldz40z00j3i"))))
     (arguments
      '(#:tests? #f))
     (build-system pyproject-build-system)
