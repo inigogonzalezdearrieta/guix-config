@@ -4,6 +4,16 @@
 ;; capture the channels being used, as returned by "guix describe".
 ;; See the "Replicating Guix" section in the manual.
 
+(define thermomat-packages
+  (list
+   "python-ruamel-yaml"
+   "python-ferpy"
+   "python-brukeropusreader"
+   "python-ft4ftirs"
+   "python-hairl-fer-py"
+   )
+  )
+
 (define python-packages
   (list
    "python"
@@ -70,7 +80,7 @@
 
 (specifications->manifest
  (append
-  ;; manual-packages ; TO-DO
+  thermomat-packages
   python-packages
   gnu-packages
   libraries

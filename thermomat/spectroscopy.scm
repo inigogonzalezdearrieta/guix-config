@@ -37,7 +37,7 @@
     (arguments
      '(#:tests? #f))
     (build-system pyproject-build-system)
-    (native-inputs (list python-setuptools))
+    (native-inputs (list python-setuptools python-setuptools-scm))
     (propagated-inputs (list python-matplotlib python-pandas))
     (home-page "https://github.com/jongablop/ferpy")
     (synopsis "A Python implementation of the FER data structure.")
