@@ -61,10 +61,11 @@ Then redirect the info towards any text file with the `>` operator.
 
 ## TO-DO
 
-- [ ] Add manifest files for packages imported from PyPI:
+- [ ] Add definitions for packages imported from PyPI:
     - [X] ferpy, brukeropusreader, ft4ftirs, hairl-fer-py.
     - [ ] spectrochempy.
-    - [ ] Non-spectroscopic packages.
+- [ ] Add definitions for other packages:
+	- [ ] Scattering: MSTM, SCATMECH.
 - [ ] Contribute those packages to the `guix` or `guix-science` repos.
 - [ ] Generate custom manifest files for different programming tasks.
 - [X] Generate and test a usable home configuration file.
