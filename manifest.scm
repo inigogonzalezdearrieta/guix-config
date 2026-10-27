@@ -11,6 +11,7 @@
    "python-brukeropusreader"
    "python-ft4ftirs"
    "python-hairl-fer-py"
+   "mstm"
    )
   )
 
