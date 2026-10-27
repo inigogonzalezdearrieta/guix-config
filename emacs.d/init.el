@@ -142,6 +142,13 @@
 (add-hook 'org-mode-hook 'my-org-insert-header)
 (add-hook 'org-mode-hook 'visual-line-mode) ;; Wrap lines in a pleasing manner in Org mode.
 
+;; LaTeX (AUCTeX mode)
+(add-hook 'LaTeX-mode-hook #'turn-on-reftex)
+
+;; DocView
+(with-eval-after-load 'doc-view
+  (setq doc-view-resolution 300))
+
 ;;;;
 ;; END OF USER-GENERATED CODE
 ;;;;
