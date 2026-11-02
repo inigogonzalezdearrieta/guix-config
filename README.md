@@ -40,10 +40,6 @@ in `manifest.scm` permanently or within a temporary shell as:
 
 ### Manual packages
 
-Manually defined packages can be installed as:
-
-> guix package -f python-ferpy.scm
-
 Packages defined on the `thermomat/` directory (or any other custom
 channel) can be tested using:
 
