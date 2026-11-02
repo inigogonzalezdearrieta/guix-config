@@ -2,7 +2,6 @@
 ;; Inigo Gonzalez de Arrieta
 ;; Minimalist setup for Python, Markdown and org-mode.
 ;; Python packages installed via guix for reproducibility.
-;; Emacs installed through apt and packages via use-package.
 ;; Started on 2025/07/30.
 ;;;;
 
