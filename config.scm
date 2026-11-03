@@ -37,8 +37,11 @@
                  	 (password-authentication? #f)))
                  (service cups-service-type)
                  (set-xorg-configuration
-                  (xorg-configuration (keyboard-layout keyboard-layout))))
-
+                  (xorg-configuration (keyboard-layout keyboard-layout)))
+		 (simple-service 'nonguix-substitutes guix-service-type
+                             (guix-extension
+                               (substitute-urls (list "https://substitutes.nonguix.org"))
+                               (authorized-keys (list (local-file "./signing-key.pub"))))))
            ;; This is the default list of services we
            ;; are appending to.
            %desktop-services))
