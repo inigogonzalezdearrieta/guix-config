@@ -5,6 +5,9 @@
   #:use-module (gnu services)
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages text-editors)
+  #:use-module (gnu packages cmake)
+  #:use-module (gnu packages autotools)
+  #:use-module (gnu packages terminals)
   #:use-module (gnu system shadow)
   #:use-module (guix gexp))
 

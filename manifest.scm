@@ -60,6 +60,7 @@
    "pandoc"
    "git"
    "fastfetch"
+   "font-liberation"
    )
   )
 
