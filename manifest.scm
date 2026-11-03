@@ -49,19 +49,15 @@
    "lapack"
    "openblas"
    "gsl"
-   "libtool"
-   "libvterm"
    )
   )
 
 (define other-packages
   (list
-   "cups"
    "mpich"
-   "texlive-scheme-full"
+   "texlive-scheme-medium"
    "ghostscript"
    "pandoc"
-   "cmake"
    "git"
    "fastfetch"
    )
@@ -70,7 +66,6 @@
 (define desktop-apps
   (list
    "libreoffice"
-   "icecat"
    "remmina"
    "gimp"
    "catfish"

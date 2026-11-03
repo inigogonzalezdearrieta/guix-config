@@ -13,7 +13,11 @@
   (packages
    (list
     emacs-pgtk ;; With Wayland support
-    nano))
+    nano
+    cmake ;; Required for my Emacs config
+    libtool ;; Required for my Emacs config
+    libvterm ;; Required for my Emacs config
+    ))
 
   (services
    (append
