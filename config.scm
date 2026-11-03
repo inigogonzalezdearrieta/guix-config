@@ -5,10 +5,8 @@
 ;; changes.
 
 
-;; Import modules from guix and nonguix channels.
-(use-modules (gnu)
-             (nongnu packages linux)
-             (nongnu system linux-initrd))
+;; Import modules and services.
+(use-modules (gnu))
 (use-service-modules cups desktop networking ssh xorg)
 
 (operating-system
@@ -16,11 +14,6 @@
   (timezone "Europe/Madrid")
   (keyboard-layout (keyboard-layout "es"))
   (host-name "U108557")
-  ;; The full Linux kernel from nonguix.
-  (kernel linux)
-  (initrd microcode-initrd)
-  (firmware (list
-             linux-firmware))
 
   ;; The list of user accounts ('root' is implicit).
   (users (cons* (user-account
@@ -55,7 +48,7 @@
                 (keyboard-layout keyboard-layout)))
   (swap-devices (list (swap-space
                         (target (uuid
-                                 "88eac526-cba2-49b6-9ab5-967f86a8a730")))))
+                                 "2d80ef46-1725-4c64-8327-ba282398fdd4")))))
 
   ;; The list of file systems that get "mounted".  The unique
   ;; file system identifiers there ("UUIDs") can be obtained
@@ -63,6 +56,6 @@
   (file-systems (cons* (file-system
                          (mount-point "/")
                          (device (uuid
-                                  "baf2c3e4-18bc-4e77-9e66-6ef5884a9d25"
+                                  "f8f26ea4-de22-418c-a663-e4902102c311"
                                   'ext4))
                          (type "ext4")) %base-file-systems)))
