@@ -4,6 +4,7 @@
   #:use-module (gnu home services shells)
   #:use-module (gnu services)
   #:use-module (gnu packages emacs)
+  #:use-module (gnu packages emacs-xyz)
   #:use-module (gnu packages text-editors)
   #:use-module (gnu packages cmake)
   #:use-module (gnu packages autotools)
@@ -16,10 +17,8 @@
   (packages
    (list
     emacs-pgtk ;; With Wayland support
+    emacs-vterm ;; Terminal support
     nano
-    cmake ;; Required for my Emacs config
-    libtool ;; Required for my Emacs config
-    libvterm ;; Required for my Emacs config
     ))
 
   (services

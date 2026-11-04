@@ -83,9 +83,9 @@
   (setq blacken-line-length 80))
 
 ;; Vterm for proper terminal compatibility.
-;; Requires: cmake, libtool-bin, libvterm(-dev)
+;; Available in Guix as emacs-vterm.
 (use-package vterm
-  :ensure t)
+  :ensure nil)
 
 ;; Company for autocompletion.
 (use-package company
