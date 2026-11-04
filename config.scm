@@ -35,9 +35,12 @@
                  	(openssh-configuration
                  	 (permit-root-login #f)
                  	 (password-authentication? #f)))
+		 ;; Other services.
+		 (service nftables-service-type)
                  (service cups-service-type)
                  (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout)))
+		 ;; Set up a signed substitute server for nonguix.
 		 (simple-service 'nonguix-substitutes guix-service-type
                              (guix-extension
                                (substitute-urls (list "https://substitutes.nonguix.org"))

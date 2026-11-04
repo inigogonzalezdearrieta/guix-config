@@ -2,6 +2,8 @@
   #:use-module (gnu home)
   #:use-module (gnu home services)
   #:use-module (gnu home services shells)
+  #:use-module (gnu home services desktop)
+  #:use-module (gnu home services sound)
   #:use-module (gnu services)
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages emacs-xyz)
@@ -24,6 +26,9 @@
   (services
    (append
     (list
+     ;; Services for inter-app communication and screen-sharing.
+     (service home-dbus-service-type)
+     (service home-pipewire-service-type)
      ;; Bash configuration
      (service home-bash-service-type
              (home-bash-configuration
