@@ -1,4 +1,4 @@
-;;;; Emacs early_init file
+;;;; Emacs early_init file  -*- lexical-binding: t; -*-
 ;; Inigo Gonzalez de Arrieta
 ;; Simple setup for improved garbage collection and pre-loading themes.
 ;; Started on 2025/09/30

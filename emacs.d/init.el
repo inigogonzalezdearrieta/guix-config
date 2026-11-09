@@ -1,4 +1,4 @@
-;;;; Emacs init file
+;;;; Emacs init file  -*- lexical-binding: t; -*-
 ;; Inigo Gonzalez de Arrieta
 ;; Minimalist setup for Python, Markdown and org-mode.
 ;; Python packages installed via guix for reproducibility.
