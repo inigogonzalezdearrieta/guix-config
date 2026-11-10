@@ -50,6 +50,12 @@
       home-files-service-type
       `((".bash_aliases" ,(local-file "dotfiles/bash_aliases"))))
 
+     ;; Git config
+     (simple-service
+      'git-config
+      home-files-service-type
+      `((".gitconfig" ,(local-file "dotfiles/gitconfig"))))
+
      ;; Nano configuration
      (simple-service
       'nanorc-config
