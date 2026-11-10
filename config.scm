@@ -37,7 +37,9 @@
                  	 (password-authentication? #f)))
 		 ;; Other services.
 		 (service nftables-service-type)
-                 (service cups-service-type)
+                 (service cups-service-type
+			  (cups-configuration
+			   (web-interface? #t)))
                  (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout)))
 		 ;; Set up a signed substitute server for nonguix.
