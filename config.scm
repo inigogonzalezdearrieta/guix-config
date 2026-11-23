@@ -6,7 +6,8 @@
 
 
 ;; Import modules and services.
-(use-modules (gnu))
+(use-modules (gnu)
+	     (gnu packages linux))
 (use-service-modules cups desktop networking ssh xorg)
 
 (operating-system
@@ -14,6 +15,7 @@
   (timezone "Europe/Madrid")
   (keyboard-layout (keyboard-layout "es"))
   (host-name "U108557")
+  (kernel linux-debian)
 
   ;; The list of user accounts ('root' is implicit).
   (users (cons* (user-account
